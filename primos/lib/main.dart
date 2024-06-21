@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'dart:io';
 
 void main() {
   runApp(const MyApp());
@@ -11,7 +12,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Mostrador de primos',
       theme: ThemeData(
         // This is the theme of your application.
         //
@@ -28,8 +29,8 @@ class MyApp extends StatelessWidget {
         //
         // This works for code too, not just values: Most code changes can be
         // tested with just a hot reload.
-        colorScheme: ColorScheme.fromSeed(
-            seedColor: const Color.fromARGB(255, 58, 137, 183)),
+        colorScheme:
+            ColorScheme.fromSeed(seedColor: Color.fromARGB(255, 183, 58, 68)),
         useMaterial3: true,
       ),
       home: const MyHomePage(title: 'Contador en Flutter '),
@@ -59,14 +60,7 @@ class _MyHomePageState extends State<MyHomePage> {
   int _counter = 0;
 
   void _incrementCounter() {
-    setState(() {
-      // This call to setState tells the Flutter framework that something has
-      // changed in this State, which causes it to rerun the build method below
-      // so that the display can reflect the updated values. If we changed
-      // _counter without calling setState(), then the build method would not be
-      // called again, and so nothing would appear to happen.
-      _counter++;
-    });
+    setState(() {});
   }
 
   @override
@@ -107,7 +101,7 @@ class _MyHomePageState extends State<MyHomePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             const Text(
-              'Haz click en el icono "+" y observa como aumenta el contador:',
+              'Haz click en el icono "+" y observa los números primos:',
             ),
             Text(
               '$_counter',
